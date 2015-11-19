@@ -1,0 +1,34 @@
+
+<video class="projekktor" poster="http://www.projekktor.com/wp-content/manual/intro.png" title="This is Projekktor" width="640" height="385" controls id="player_a">
+    <source src="https://resources.yourcaresteps.com/p/101/sp/10100/playManifest/entryId/0_06yd4ye3/format/hdnetworkmanifest/protocol/http/cdnHost/resources.yourcaresteps.com/uiConfId/23448187/a/a.f4m" type="application/f4m+xml" />
+    <source src="https://resources.yourcaresteps.com/p/101/sp/10100/playManifest/entryId/0_06yd4ye3/format/url/protocol/https/cdnHost/resources.yourcaresteps.com/uiConfId/23448187/a/a.mp4" type="video/mp4" />
+</video>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="projekktor-1.3.09.min.js"></script> 
+<link rel="stylesheet" href="themes/maccaco/projekktor.style.css" type="text/css" media="screen" />
+
+<script type="text/javascript">
+
+jQuery(document).ready(function($) {
+
+    /*********************************************************************
+      Configure and instantiate the player and
+      apply an "onReady" callback function
+    *********************************************************************/    
+    var myPlayer = projekktor('video', {
+    debug: false,
+	playerFlashMP4: 'swf/StrobeMediaPlayback/StrobeMediaPlayback.swf',
+    playerFlashMP3: 'swf/StrobeMediaPlayback/StrobeMediaPlayback.swf',
+    fixedVolume: false,
+    controls: true,
+    continuous: true,
+    ratio: 16/9,
+    videoScaling: 'aspectratio', //options are 'aspectratio', 'fill' or 'none'
+    platforms: ['flash', 'android', 'ios', 'native', 'browser', 'vlc'],
+    }, function(player) {
+     
+
+    });    
+});
+</script>
